@@ -1,7 +1,7 @@
 # Enterprise-Troubleshooting-Environment For Image Deployment
-
-<center> ![image](https://github.com/AngelPerales10/Enterprise-Troubleshooting-Environment/assets/108242721/60c882b5-1f4e-4ef1-935e-3a3abe48d322) </center>
-
+<div style="text-align:center;">
+![image](https://github.com/AngelPerales10/Enterprise-Troubleshooting-Environment/assets/108242721/60c882b5-1f4e-4ef1-935e-3a3abe48d322) 
+</div>
 **Author:** Angel Perales
 
 ## Table of Contents
@@ -64,6 +64,7 @@ The project successfully automated credential caching, streamlining IT support o
 
 ### Virtualized Lab Environment
 - Documentation outlining setup, configuration, and functionality.
+
 ![image](https://github.com/AngelPerales10/Enterprise-Troubleshooting-Environment/assets/108242721/60c882b5-1f4e-4ef1-935e-3a3abe48d322)
 
 
@@ -87,11 +88,13 @@ Start-Process "notepad.exe" -Credential $creds -LoadUserProfile
 
 ### Efficient Testing Environment
 - Established lab that will be used to test future deployment issues / configurations.
+
 ![image](https://github.com/AngelPerales10/Enterprise-Troubleshooting-Environment/assets/108242721/e5ce8c54-3ec6-432b-bf79-54ec12f23454)
 
 
 ### Automated Deployment Process
 - Removing manual step from deployment, saving about 15 minutes of manual work per deployment
+
 ![image](https://github.com/AngelPerales10/Enterprise-Troubleshooting-Environment/assets/108242721/7e870575-f92c-48e6-b6b2-4997aaa9fc7f)
 
 
