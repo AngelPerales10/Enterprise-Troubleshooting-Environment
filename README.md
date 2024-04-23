@@ -21,7 +21,9 @@ The Enterprise Troubleshooting Image Deployment Lab project aimed to address cri
 
 The initial goal of this lab was to cache IT support credentials within every laptop imaged so support can remotely access student laptops when a ticket is requested. The process was initially done manually by logging into each laptop with support credentials after deployment. Human error, however, would occur, resulting in laptops not containing credentials, which would require students to come on-premises for support. 
 
-This project sought to automate these processes and provide an environment for future image deployment testing.
+This manual job also required human resource consumtion, resulting in around 15 minutes of manual labor per mass deployment. 
+
+This project sought to automate these processes, solve the concerns above, and provide an environment for future image deployment testing.
 
 ## Review of Other Work
 
