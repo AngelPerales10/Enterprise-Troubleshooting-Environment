@@ -73,11 +73,12 @@ The project successfully automated credential caching, streamlining IT support o
 - Actual credentials have been changed due to obvious security reasons.
 - We chose this script out of the many other winners due to its basic nature and unintrusive actions on the operating systems configurations.
 
-`$username = "domain\itsupport" \n
-$password = "password" | ConvertTo-SecureString -AsPlainText -Force \n
-$creds = New-Object System.Management.Automation.PSCredential($username, $password) \n
+```
+$username = "domain\itsupport"
+$password = "password" | ConvertTo-SecureString -AsPlainText -Force
+$creds = New-Object System.Management.Automation.PSCredential($username, $password)
 Start-Process "notepad.exe" -Credential $creds -LoadUserProfile
-`
+```
 
 ### Integrated Caching Script into Production
 - The script that is marked as a deliverable above has now been added to our deployment process.
