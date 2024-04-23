@@ -17,7 +17,9 @@
 
 ## Summary
 
-The Enterprise Troubleshooting Image Deployment Lab project aimed to address critical issues within the organization's deployment infrastructure. By creating a testing environment, the project enabled safe and efficient troubleshooting without disruptions to the production environment. The project involved thorough planning, virtualization, analysis, design, implementation, testing, and maintenance phases. The initial goal with this lab was to cache IT support credentials within every laptop imaged so support can remote into student laptops when a ticket is requested. Process was initially done manually by logging into each laptop with support credentials after deployment. This project sought to automate this processes, while preventing laptops from lacking credentials due to human error (which would require students to come on-premises for support), and provide an environment for future image deployment testing.
+The Enterprise Troubleshooting Image Deployment Lab project aimed to address critical issues within the organization's deployment infrastructure. By creating a testing environment, the project enabled safe and efficient troubleshooting without disruptions to the production environment. The project involved thorough planning, virtualization, analysis, design, implementation, testing, and maintenance phases. 
+
+The initial goal with this lab was to cache IT support credentials within every laptop imaged so support can remote into student laptops when a ticket is requested. Process was initially done manually by logging into each laptop with support credentials after deployment. This project sought to automate this processes, while preventing laptops from lacking credentials due to human error (which would require students to come on-premises for support), and provide an environment for future image deployment testing.
 
 ## Review of Other Work
 
