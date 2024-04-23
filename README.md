@@ -1,6 +1,8 @@
 # Enterprise-Troubleshooting-Environment For Image Deployment
 
-**Author:** Angel Perales Jr.  
+<center> ![image](https://github.com/AngelPerales10/Enterprise-Troubleshooting-Environment/assets/108242721/60c882b5-1f4e-4ef1-935e-3a3abe48d322) </center>
+
+**Author:** Angel Perales
 
 ## Table of Contents
 
@@ -9,8 +11,6 @@
 - [Changes to the Project Environment](#changes-to-the-project-environment)
 - [Methodology](#methodology)
 - [Project Goals and Objectives](#project-goals-and-objectives)
-- [Project Timeline](#project-timeline)
-- [Unanticipated Requirements](#unanticipated-requirements)
 - [Conclusions](#conclusions)
 - [Project Deliverables](#project-deliverables)
 - [References](#references)
@@ -55,13 +55,6 @@ The Systems Development Life Cycle (SDLC) was followed, ensuring a structured ap
 - **Objective 1:** Establish testing environment
 - **Objective 2:** Automate deployment configurations
 
-## Project Timeline
-
-Detailed project timeline with milestones and durations.
-
-## Unanticipated Requirements
-
-Outlined unanticipated technical and learning curve requirements encountered during the project.
 
 ## Conclusions
 
@@ -71,19 +64,41 @@ The project successfully automated credential caching, streamlining IT support o
 
 ### Virtualized Lab Environment
 - Documentation outlining setup, configuration, and functionality.
+![image](https://github.com/AngelPerales10/Enterprise-Troubleshooting-Environment/assets/108242721/60c882b5-1f4e-4ef1-935e-3a3abe48d322)
+
 
 ### Configurations and Scripts
 - Final PowerShell script developed for credential caching.
+- It holds the support credentials as variables, and opens up the application Notepad as the credentialed user.
+- That user connects to Active Directory to verify itself as a user of the domain, and opens Notepad as that user, only for that one action. This in itself caches the user onto the laptop.
+- Actual credentials have been changed due to obvious security reasons.
+- We chose this script out of the many other winners due to its basic nature and unintrusive actions on the operating systems configurations.
+
+`$username = "domain\itsupport"
+$password = "password" | ConvertTo-SecureString -AsPlainText -Force
+$creds = New-Object System.Management.Automation.PSCredential($username, $password)
+Start-Process "notepad.exe" -Credential $creds -LoadUserProfile
+`
 
 ### Integrated Caching Script into Production
-- Description of integrating the caching script into the deployment process.
+- The script that is marked as a deliverable above has now been added to our deployment process.
+- It has not been added directly into the deployment software, rather, it has been added to the end of the cleanup process script that runs at the end of every deployment.
+- A visual deliverable cannot be added to this repository as I am not permitted to take screenshots from our production machine.
 
 ### Efficient Testing Environment
-- Description of the testing environment and its utility.
+- Established lab that will be used to test future deployment issues / configurations.
+![image](https://github.com/AngelPerales10/Enterprise-Troubleshooting-Environment/assets/108242721/e5ce8c54-3ec6-432b-bf79-54ec12f23454)
+
 
 ### Automated Deployment Process
-- Overview of the streamlined deployment process.
+- Removing manual step from deployment, saving about 15 minutes of manual work per deployment
+![image](https://github.com/AngelPerales10/Enterprise-Troubleshooting-Environment/assets/108242721/7e870575-f92c-48e6-b6b2-4997aaa9fc7f)
+
 
 ## References
+BTNHD. (2019, January 28). MDT 8456 (step-by-step) BASIC INSTALLATION GUIDE!. [YouTube.](https://www.youtube.com/watch?v=yIOotj2V118)
 
-List of references used in the project.
+Deland-Han. (n.d.). Configure windows to Automate Logon - Windows Server. Configure Windows to automate logon - Windows Server | [Microsoft Learn.](https://learn.microsoft.com/en-us/troubleshoot/windows-server/user-profiles-and-logon/turn-on-automatic-logon)
+
+BalaDelli. (n.d.-a). Toolkit reference - microsoft deployment toolkit (MDT) scripts - microsoft deployment toolkit. Toolkit reference - Microsoft Deployment Toolkit (MDT) Scripts - Microsoft Deployment Toolkit | [Microsoft Learn.](https://learn.microsoft.com/en-us/mem/configmgr/mdt/scripts)
+
