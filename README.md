@@ -1,7 +1,7 @@
 # Enterprise-Troubleshooting-Environment For Image Deployment
-<div style="text-align:center;">
+
 ![image](https://github.com/AngelPerales10/Enterprise-Troubleshooting-Environment/assets/108242721/60c882b5-1f4e-4ef1-935e-3a3abe48d322) 
-</div>
+
 **Author:** Angel Perales
 
 ## Table of Contents
@@ -64,9 +64,7 @@ The project successfully automated credential caching, streamlining IT support o
 
 ### Virtualized Lab Environment
 - Documentation outlining setup, configuration, and functionality.
-
-![image](https://github.com/AngelPerales10/Enterprise-Troubleshooting-Environment/assets/108242721/60c882b5-1f4e-4ef1-935e-3a3abe48d322)
-
+- (see first image above)
 
 ### Configurations and Scripts
 - Final PowerShell script developed for credential caching.
@@ -75,9 +73,9 @@ The project successfully automated credential caching, streamlining IT support o
 - Actual credentials have been changed due to obvious security reasons.
 - We chose this script out of the many other winners due to its basic nature and unintrusive actions on the operating systems configurations.
 
-`$username = "domain\itsupport"
-$password = "password" | ConvertTo-SecureString -AsPlainText -Force
-$creds = New-Object System.Management.Automation.PSCredential($username, $password)
+`$username = "domain\itsupport" \n
+$password = "password" | ConvertTo-SecureString -AsPlainText -Force \n
+$creds = New-Object System.Management.Automation.PSCredential($username, $password) \n
 Start-Process "notepad.exe" -Credential $creds -LoadUserProfile
 `
 
