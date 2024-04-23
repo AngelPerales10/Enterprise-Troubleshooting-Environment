@@ -2,7 +2,7 @@
 
 ![image](https://github.com/AngelPerales10/Enterprise-Troubleshooting-Environment/assets/108242721/60c882b5-1f4e-4ef1-935e-3a3abe48d322) 
 
-**Author:** Angel Perales
+**Author:** Angel Perales Jr.
 
 ## Table of Contents
 
